@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1678124605 "c:/Users/andre/Desktop/Machine-Learning-Book/main.tex" "main.pdf" "main" 1678124606 0
+["pdflatex"] 1678125285 "c:/Users/andre/Desktop/Machine-Learning-Book/main.tex" "main.pdf" "main" 1678125286 0
   "C:/Users/andre/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1678123174 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/andre/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1678117982 11548 de91c28bb504d11d45846d478fbea2d6 ""
   "C:/Users/andre/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1678117911 23175797 0f02a6fda343ce90617e7304aacf7f48 ""
@@ -39,14 +39,15 @@
   "C:/Users/andre/AppData/Local/Programs/MiKTeX/tex/latex/graphics/keyval.sty" 1665063979 2671 7e67d78d9b88c845599a85b2d41f2e39 ""
   "C:/Users/andre/AppData/Local/Programs/MiKTeX/tex/latex/graphics/trig.sty" 1665063979 4023 293ea1c16429fc0c4cf605f4da1791a9 ""
   "C:/Users/andre/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-pdftex.def" 1673900822 30429 213676d4c7327a21d91ddaed900e7b81 ""
-  "c:/Users/andre/Desktop/Machine-Learning-Book/main.tex" 1678124605 17673 db77bab8d150e816dab3c20e6a270ca8 ""
+  "c:/Users/andre/Desktop/Machine-Learning-Book/main.tex" 1678125283 17873 e7c569576e96a937b15cfbd04ce58b7c ""
+  "images/p112_img523.png" 1678120208 196725 19181efc4e1efeecc0b75408f2defdaa ""
   "images/p118_img552.png" 1678120208 145672 11937ee10d63ccfbaa59480b1de06d64 ""
   "images/p30_img183.png" 1678120201 259414 2657caca703e245bc92814a83180ab79 ""
   "images/p50_img275.png" 1678120203 124334 174dbc0f4513f6cf8f7e386bdc7ff970 ""
   "images/p63_img322.png" 1678120204 674769 433466e7c66eaec4f1a01f7eb85003f0 ""
   "images/p93_img447.png" 1678120206 359851 df9f780be22b92c54ebb068de38d746f ""
-  "main.aux" 1678124606 1356 017f2ea0b8629ecc305c6de9f4091ef6 "pdflatex"
-  "main.tex" 1678124605 17673 db77bab8d150e816dab3c20e6a270ca8 ""
+  "main.aux" 1678125286 1494 1884e7d5c09f550f4b7d4b0ada9946f1 "pdflatex"
+  "main.tex" 1678125283 17873 e7c569576e96a937b15cfbd04ce58b7c ""
   (generated)
   "main.aux"
   "main.log"
