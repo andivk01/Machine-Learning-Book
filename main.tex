@@ -7,6 +7,9 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{caption}
+\usepackage{amssymb}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\Var}{Var}
 
 \begin{document}
 
@@ -14,8 +17,10 @@
 \begin{itemize}
     \item supervised, unpservised, reinforcement learning. classification vs clustering, Example of supervised learning and others
     \item data space with examples, example of datasets, labels, data vs task vs loss, example of common losses
-    \item test set vs validation set, model complexity, params vs hyperparams, overfitting, underfitting, example of overfitting, example of underfitting, causality vs correlation, example of causality, example of correlation, vbias/variance tradeoff and regularizations (lp norms, lasso ridge net)
-    \item ripasso probabilita, probabilita condizionata, probabilita a posteriori, probabilita a priori, joint distribution, bayes th, i.i.d
+    \item test set vs validation set, model complexity, params vs hyperparams,
+    overfitting, underfitting, example of overfitting, example of underfitting, , 
+    vbias/variance tradeoff and regularizations (lp norms, lasso ridge net)
+    \item ripasso probabilita, causality vs correlation, example of causality, example of correlation, probabilita condizionata, probabilita a posteriori, probabilita a priori, joint distribution, bayes th, i.i.d
     \item gradient descent (weights and learning rate)
     \item unsupervised learnign (manifold, desnity estimation, clustering, dimensionality reduction, flat clustering (partition and density based), fuzzy clustering, hierichical clustering)
 \end{itemize}
@@ -158,16 +163,86 @@ The bias-variance tradeoff is the balance between the complexity of the model an
 \end{figure}
 
 \noindent Bias refers to the error that is introduced by approximating a real-world problem with a simpler model, while variance refers to the error that is introduced by model sensitivity to small fluctuations in the training data.\\
-Bias formula example:
-
 A high-bias model may have poor performance on the training data but generalizes well to new data, while a high-variance model may have good performance on the training data but poor generalization performance.\\
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=11cm]{./images/p118_img552.png}
     \caption{Bias-variance tradeoff}
 \end{figure}
+\subsection{Bias-variance tradeoff in formal terms}
+Consider the following model:
+\[y = f(x) + \epsilon\]
+where $f(x)$ is the true function that relates the input $x$ to the output $y$, and $\epsilon$ is the noise in the data.\\
+$\epsilon$ is a random variable such that:
+\[\E[\epsilon] = 0, \Var[\epsilon] = \sigma^2\]
+When we try to model the underlying real-life problem, what this means actually is that we try to find a function $\hat{f}$ such that it is as close to the true (yet unknown to us) function f.
+Function $\hat{f}$ is learned by minimizing a loss function whose goal is to bring predictions of training data as close as possible to their observed values: $y \approx \hat{f}(x)$.\\
+MSE is a common loss function used in regression problems and is defined as:
+\[\text{MSE} = \E[(y - \hat{f}(x))^2]\]
+The bias of a model is defined as the difference of the average value of prediction (over different realizations of training data) to the true underlying function f(x) for a given unseen (test) point x.
+\[\text{Bias} = \E_{\hat{f}}[\hat{f}(x) - f(x)]\]
+In similar fashion, the variance of the model is defined as:
+\[\text{Variance} = \E_{\hat{f}}[(\hat{f}(x) - \E_{\hat{f}}[\hat{f}(x)])^2]\]
+The formula that relates the bias and variance of a model is:
+\[\E_x[\E_{\hat{f}, \epsilon}[(y - \hat{f}(x))^2]] = \E_x[\text{Bias}^2 + \text{Variance} + \sigma_\epsilon^2]\]
+The first expectation term is over the distribution of unseen (test) points x, while the second over the distribution of training data and random variable $\epsilon$.\\
+Note: $\E_{\hat{f}, \epsilon}$ is the expectation over the model and the noise (the model and the noise depend on the training data).\\\\
+The formula can be written in a more compact form:
+\[\E[\E[(y - \hat{f}(x))^2]] = \E[\text{Bias}^2] + \E[\text{Variance}] + \sigma_\epsilon^2\]
+or can be found in this form:
+\[\text{MSE} = \text{Bias}^2 + \text{Variance} + \sigma_\epsilon^2\]
+where $\sigma_\epsilon^2$ is the irreducible error, which is the error that cannot be reduced by any model.\\
+The formula can be proven by using properties of expectation value.\\
+https://towardsdatascience.com/the-bias-variance-tradeoff-8818f41e39e9
 
-\noindent One way to address the bias-variance tradeoff is through regularization techniques, which penalize the complexity of the model and encourage it to generalize better to new data. Another way is to use ensemble methods, such as bagging and boosting, which combine multiple models to reduce the variance and improve the generalization performance.
-
-
+\section{Model parameters and hyperparameters}
+In machine learning, the terms "model parameters" and "hyperparameters" refer to two different types of values that are used to train a model.\\
+Model parameters are the variables that are learned by the model during training, based on the input data and the desired output. These parameters are adjusted by the learning algorithm in order to minimize the difference between the predicted output of the model and the true output.\\
+For example, in a linear regression model, the model parameters are the slope and intercept of the line.
+Hyperparameters, on the other hand, are values that are set before training begins and are not learned by the model during training. They control aspects of the learning algorithm, such as the learning rate, the number of hidden layers in a neural network, or the type of regularization used.
+\subsection{Regularization hyperparameters}
+Regularization is a technique used to reduce the complexity of a model by adding a penalty term to the loss function that the model is trying to minimize. The penalty term is typically based on the magnitude of the model parameters and is intended to discourage the model from assigning too much weight to any one feature or input. Regularization helps to prevent overfitting, which occurs when the model is overly complex and fits the training data too closely, resulting in poor performance on new, unseen data.\\
+There are several types of regularization techniques, including L1 regularization (also known as Lasso), L2 regularization (also known as Ridge regression), and dropout regularization. L1 regularization adds a penalty term proportional to the absolute value of the model parameters, while L2 regularization adds a penalty term proportional to the square of the model parameters. Dropout regularization randomly drops out some of the nodes in a neural network during training, forcing the remaining nodes to learn more robust features.\\
+By adding regularization to a model, it is possible to achieve better generalization performance on new data, even if the model is less accurate on the training data. This is because the model is less likely to overfit and will be better able to generalize to new, unseen data.\\
+\noindent For example, in linear regression models, the lasso regularization term is added to the loss function as:
+\[\text{Lasso loss} = \frac{1}{n} \sum_{i=1}^n (y_i - \hat{f}(x_i))^2 + \lambda \sum_{j=1}^p |\omega_j|\]
+that can be written in this form:
+\[\text{Lasso loss} = \frac{1}{2n} ||y - X\omega||_2^2 + \lambda ||\omega||_1\]
+where $\lambda$ is the regularization hyperparameter.\\\\
+The difference between Lasso and Ridge regularization is the type of penalty term they use to prevent overfitting.
+Lasso performs feature selection by setting some regression coefficients to zero, while Ridge performs coefficient shrinkage by reducing the magnitude of all the regression coefficients.\\
+We can combine Lasso and Ridge regularization techniques to obtain a hybrid regularization method that balances the strengths of both methods.
+This hybrid regularization method is known as Elastic Net.\\
+Elastic Net regularization is particularly useful for datasets with a large number of features and multicollinearity between predictors, as it can handle highly correlated predictors by selecting one predictor from a group of highly correlated predictors while shrinking the coefficients of the others towards zero.
+\section{Gradient descent}
+Gradient descent is a first-order optimization algorithm that is commonly used in machine learning to minimize a function by iteratively adjusting its parameters.\\
+It is used to find the optimal set of parameters for a model that will best fit the data.\\
+The basic idea of gradient descent is to iteratively update the parameters of a model by taking steps proportional to the negative of the gradient of the function being optimized with respect to those parameters. In other words, the algorithm moves in the direction of steepest descent (i.e., the direction of the negative gradient) in order to minimize the function.\\
+The algorithm starts with an initial set of parameters and then iteratively adjusts them by taking steps in the direction of the negative gradient. The size of each step is controlled by a parameter called the learning rate, which determines how quickly the algorithm converges to the optimal solution.\\
+There are two main types of gradient descent: batch gradient descent and stochastic gradient descent. In batch gradient descent, the algorithm calculates the gradient of the entire training set at each iteration. In stochastic gradient descent, the algorithm calculates the gradient of a randomly selected subset of the training set at each iteration, making the algorithm faster and more efficient.\\
+One important consideration when using gradient descent is the choice of the learning rate. If the learning rate is too large, the algorithm may overshoot the optimal solution and fail to converge. If the learning rate is too small, the algorithm may converge too slowly or get stuck in local minima
+\begin{figure}[!ht]
+\includegraphics[width=0.6\textwidth]{images/img0.png}
+\includegraphics[width=0.4\textwidth]{images/img1.png}
+\caption{(batch) Gradient Descent and Stochastic Gradient Descent}
+\end{figure}
+\section{Supervised learning models}
+\subsection{Linear regression}
+Linear regression is a statistical method used to model the relationship between a dependent variable and one or more independent variables. It is a simple and widely used approach for modeling the relationship between a continuous dependent variable (also called the response variable or target variable) and one or more independent variables (also called predictor variables, explanatory variables or features).\\
+In simple linear regression, there is only one independent variable, and the relationship between the dependent variable and independent variable is assumed to be linear.\\
+The goal of linear regression is to find the line that best fits the data by minimizing the sum of the squared differences between the predicted values and the actual values of the dependent variable.\\
+In multiple linear regression, there are multiple independent variables, and the relationship between the dependent variable and independent variables is also assumed to be linear. The goal of multiple linear regression is to find the line that best fits the data by minimizing the sum of the squared differences between the predicted values and the actual values of the dependent variable.\\
+Once the line of best fit has been determined, it can be used to predict the value of the dependent variable based on the values of the independent variables.
+\[\text{FORMULAS (normal and l1 regularized...)}\]
+\subsection{Logistic regression}
+Logistic regression is a statistical model used for binary classification problems, where the goal is to predict the probability of an event occurring or not occurring based on a set of input features.\\
+It is a type of generalized linear model that uses the logistic function to transform a linear combination of the input features into a probability value between 0 and 1.\\
+The logistic function, also known as the sigmoid function, is defined as follows:\\
+\[\sigma(x) = \frac{1}{1 + e^{-x}}\]
+The logistic regression model learns the values of the coefficients that best fit the training data by minimizing a loss function, such as the cross-entropy loss, using an optimization algorithm such as gradient descent.\\
+Once trained, the logistic regression model can be used to predict the probability of an event occurring for new input data.\\
+The predicted probability can be thresholded at 0.5 to make a binary classification decision, or the model's output can be interpreted as a continuous score or probability.
+\[\text{FORMULAS (normal and l1 regularized... ECC)}\]
+\subsection{GENERALIZATDED LINEAR MODELS}
+\section{Introduction to unsupervised learning}
 \end{document}
