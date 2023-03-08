@@ -8,6 +8,16 @@
 \usepackage{amsmath}
 \usepackage{caption}
 \usepackage{amssymb}
+
+\newcommand{\F}{\mathscr{F}}
+\newcommand{\G}{\mathscr{G}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+
 \DeclareMathOperator{\E}{\mathbb{E}}
 \DeclareMathOperator{\Var}{Var}
 
@@ -122,10 +132,10 @@ The loss is a mathematical function that measures the difference between the pre
 Commonly used loss functions in machine learning include:
 \begin{itemize}
     \item Mean squared error (MSE): Used for regression problems, the MSE measures the average squared difference between the predicted and true values.
-    \[\text{MSE}=\frac{1}{N} \sum_{i=1}^N (y_i-\hat{y}_i)^2\]
+    \[\frac{1}{N} \sum_{i=1}^N (y_i-\hat{y}_i)^2\]
     RMSE is the square root of MSE, which makes it easier to interpret because it is in the same units as the target variable but it is more sensitive to outliers than MSE. 
     \item Cross-entropy: Used for classification problems, cross-entropy measures the difference between the predicted and true probability distributions over the classes.
-    \[\text{FORMULA}\]
+    \[\sum_i y_i \ln{p(x_i)} + (1-y_i) \ln{(1-p(x_i))}\]
     \item Binary cross-entropy: A variant of cross-entropy used for binary classification problems where there are only two possible classes.
     \[\text{FORMULA}\]
     \item Hinge loss: Used for classification problems in which the model is expected to produce a binary output, the hinge loss measures the difference between the predicted output and the true output.
@@ -192,7 +202,7 @@ The formula can be written in a more compact form:
 or can be found in this form:
 \[\text{MSE} = \text{Bias}^2 + \text{Variance} + \sigma_\epsilon^2\]
 where $\sigma_\epsilon^2$ is the irreducible error, which is the error that cannot be reduced by any model.\\
-The formula can be proven by using properties of expectation value.\\
+The formula can be proven by using properties of expectation value. TODO\\
 https://towardsdatascience.com/the-bias-variance-tradeoff-8818f41e39e9
 
 \section{Model parameters and hyperparameters}
@@ -211,9 +221,46 @@ that can be written in this form:
 where $\lambda$ is the regularization hyperparameter.\\\\
 The difference between Lasso and Ridge regularization is the type of penalty term they use to prevent overfitting.
 Lasso performs feature selection by setting some regression coefficients to zero, while Ridge performs coefficient shrinkage by reducing the magnitude of all the regression coefficients.\\
+Limitations of Ridge and Lasso Regressions:
+\begin{itemize}
+    \item Ridge regression does not help in feature selection.
+    \item Ridge regression use to shrink the coefficients, but never sets their values as absolute zero.\\
+    The model will retain all the features and will remain complex, which may lead to poor model performance.
+    \item When we apply Lasso regression to a model which has highly correlated variables, then it will retain only a few variables and sets other variables to be zero. That will lead to some loss of information as well as lower
+    accuracy of the model.
+\end{itemize}
 We can combine Lasso and Ridge regularization techniques to obtain a hybrid regularization method that balances the strengths of both methods.
 This hybrid regularization method is known as Elastic Net.\\
 Elastic Net regularization is particularly useful for datasets with a large number of features and multicollinearity between predictors, as it can handle highly correlated predictors by selecting one predictor from a group of highly correlated predictors while shrinking the coefficients of the others towards zero.
+
+\section{Supervised learning models}
+\subsection{Linear regression}
+Linear regression is a statistical method used to model the relationship between a dependent variable and one or more independent variables. It is a simple and widely used approach for modeling the relationship between a continuous dependent variable (also called the response variable or target variable) and one or more independent variables (also called predictor variables, explanatory variables or features).\\
+In simple linear regression, there is only one independent variable, and the relationship between the dependent variable and independent variable is assumed to be linear.\\
+The goal of linear regression is to find the line that best fits the data by minimizing the sum of the squared differences between the predicted values and the actual values of the dependent variable.\\
+In multiple linear regression, there are multiple independent variables, and the relationship between the dependent variable and independent variables is also assumed to be linear. The goal of multiple linear regression is to find the line that best fits the data by minimizing the sum of the squared differences between the predicted values and the actual values of the dependent variable.\\
+Once the line of best fit has been determined, it can be used to predict the value of the dependent variable based on the values of the independent variables.
+\[\omega, x \in\R^d, X\in\R^{d\times N}, y\in\R^N\]
+\[\frac{1}{N} ||y-X^\intercal\omega||_2^2\]
+\[\text{FORMULAS (normal and l1 regularized...)}\]
+\subsection{Polynomial regression}
+BLA BLA BLA BLA
+\[todo, formulas...\]
+\subsection{Logistic regression}
+\[\text{TODO: what if we use linear regression...?}\]
+Logistic regression is a statistical model used for binary classification problems, where the goal is to predict the probability of an event occurring or not occurring based on a set of input features.\\
+It is a type of generalized linear model that uses the logistic function to transform a linear combination of the input features into a probability value between 0 and 1.\\
+The logistic function, also known as the sigmoid function, is defined as follows:\\
+\[\sigma(x) = \frac{1}{1 + e^{-x}}\]
+The logistic regression model learns the values of the coefficients that best fit the training data by minimizing a loss function, such as the cross-entropy loss, using an optimization algorithm such as gradient descent.\\
+Once trained, the logistic regression model can be used to predict the probability of an event occurring for new input data.\\
+The predicted probability can be thresholded at 0.5 to make a binary classification decision, or the model's output can be interpreted as a continuous score or probability.
+\[\text{FORMULAS (normal and l1 regularized... ECC)}\]
+\[\text{TODO: properties of the logistic function, interpet coefficient}\]
+\[\text{maximum likelihood to cross entropy loss}\]
+\subsection{Multi-class logistic regression}
+\subsection{poisson and GENERALIZATDED LINEAR MODELS}
+
 \section{Gradient descent}
 Gradient descent is a first-order optimization algorithm that is commonly used in machine learning to minimize a function by iteratively adjusting its parameters.\\
 It is used to find the optimal set of parameters for a model that will best fit the data.\\
@@ -226,23 +273,23 @@ One important consideration when using gradient descent is the choice of the lea
 \includegraphics[width=0.4\textwidth]{images/img1.png}
 \caption{(batch) Gradient Descent and Stochastic Gradient Descent}
 \end{figure}
-\section{Supervised learning models}
-\subsection{Linear regression}
-Linear regression is a statistical method used to model the relationship between a dependent variable and one or more independent variables. It is a simple and widely used approach for modeling the relationship between a continuous dependent variable (also called the response variable or target variable) and one or more independent variables (also called predictor variables, explanatory variables or features).\\
-In simple linear regression, there is only one independent variable, and the relationship between the dependent variable and independent variable is assumed to be linear.\\
-The goal of linear regression is to find the line that best fits the data by minimizing the sum of the squared differences between the predicted values and the actual values of the dependent variable.\\
-In multiple linear regression, there are multiple independent variables, and the relationship between the dependent variable and independent variables is also assumed to be linear. The goal of multiple linear regression is to find the line that best fits the data by minimizing the sum of the squared differences between the predicted values and the actual values of the dependent variable.\\
-Once the line of best fit has been determined, it can be used to predict the value of the dependent variable based on the values of the independent variables.
-\[\text{FORMULAS (normal and l1 regularized...)}\]
-\subsection{Logistic regression}
-Logistic regression is a statistical model used for binary classification problems, where the goal is to predict the probability of an event occurring or not occurring based on a set of input features.\\
-It is a type of generalized linear model that uses the logistic function to transform a linear combination of the input features into a probability value between 0 and 1.\\
-The logistic function, also known as the sigmoid function, is defined as follows:\\
-\[\sigma(x) = \frac{1}{1 + e^{-x}}\]
-The logistic regression model learns the values of the coefficients that best fit the training data by minimizing a loss function, such as the cross-entropy loss, using an optimization algorithm such as gradient descent.\\
-Once trained, the logistic regression model can be used to predict the probability of an event occurring for new input data.\\
-The predicted probability can be thresholded at 0.5 to make a binary classification decision, or the model's output can be interpreted as a continuous score or probability.
-\[\text{FORMULAS (normal and l1 regularized... ECC)}\]
-\subsection{GENERALIZATDED LINEAR MODELS}
-\section{Introduction to unsupervised learning}
+\subsection{Calculate the gradient of a function}
+MATRIIX CALCULUS, EXAMPLES ECC\\ GRADIENT OF LP NORM AND OF REGRESSION LOSS (PG18 SECOND PDF)
+\subsection{Convex functions and local minima}
+check if the function is convex or not using the Hessian matrix... N<d: not enough data to estimate the parameters, X not full rank = not invertible\\
+\subsection{Step size and learning rate choice}
+
+\section{Measuring model performance}
+in simple linear regression: r2, adj r2. generalize it to other models (logistic regression...).\\
+Model optimism for model selection\\
+Cross validation and choosing K (k-fold cross validation, leave one out cross validation ecc).\\
+Precision and recall. tpr and fpr ecc... f1 score, balanced accuracy, Fowlkes-Mallow, Matthews Correlation, Jaccard Index, ROC curve, auc.\\
+Pair-counting measures, rand index, mutual information
+
+\section{Unsupervised learning}
+blocco 3 mi pare
+
+\section{Supervised learning}
+blocco 4/5 mi pare
+
 \end{document}

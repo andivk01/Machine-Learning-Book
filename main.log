@@ -1,15 +1,15 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.6)  7 MAR 2023 18:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2023.3.1)  8 MAR 2023 20:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **c:/Users/andre/Desktop/Machine-Learning-Book/main.tex
 (c:/Users/andre/Desktop/Machine-Learning-Book/main.tex
-LaTeX2e <2022-11-01> patch level 1
-L3 programming layer <2023-02-07> (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
-Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
+LaTeX2e <2022-06-01> patch level 5
+L3 programming layer <2022-09-28> (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
 (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
-File: size10.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
+File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count185
 \c@section=\count186
@@ -19,9 +19,9 @@ File: size10.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
 \c@subparagraph=\count190
 \c@figure=\count191
 \c@table=\count192
-\abovecaptionskip=\skip48
-\belowcaptionskip=\skip49
-\bibindent=\dimen140
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
 ) (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
  (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
@@ -35,14 +35,14 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \Gm@cnth=\count193
 \Gm@cntv=\count194
 \c@Gm@tempcnt=\count195
-\Gm@bindingoffset=\dimen141
-\Gm@wd@mp=\dimen142
-\Gm@odd@mp=\dimen143
-\Gm@even@mp=\dimen144
-\Gm@layoutwidth=\dimen145
-\Gm@layoutheight=\dimen146
-\Gm@layouthoffset=\dimen147
-\Gm@layoutvoffset=\dimen148
+\Gm@bindingoffset=\dimen139
+\Gm@wd@mp=\dimen140
+\Gm@odd@mp=\dimen141
+\Gm@even@mp=\dimen142
+\Gm@layoutwidth=\dimen143
+\Gm@layoutheight=\dimen144
+\Gm@layouthoffset=\dimen145
+\Gm@layoutvoffset=\dimen146
 \Gm@dimlist=\toks17
  (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
@@ -56,12 +56,14 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 Package graphics Info: Driver file: pdftex.def on input line 107.
  (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
 File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+\stockwidth=\dimen147
+\stockheight=\dimen148
 ))
 \Gin@req@height=\dimen149
 \Gin@req@width=\dimen150
 ) (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2022/04/08 v2.17n AMS math features
-\@mathmargin=\skip50
+\@mathmargin=\skip49
 
 For additional information on amsmath, use the `?' option.
 (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
@@ -118,8 +120,8 @@ LaTeX Info: Redefining \Relbar on input line 971.
 \totwidth@=\dimen158
 \lineht@=\dimen159
 \@envbody=\toks21
-\multlinegap=\skip51
-\multlinetaggap=\skip52
+\multlinegap=\skip50
+\multlinetaggap=\skip51
 \mathdisplay@stack=\toks22
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
@@ -149,26 +151,26 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )) (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
-File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
+File: l3backend-pdftex.def 2022-09-28 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count276
 \l__pdf_internal_box=\box53
 ) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -231,64 +233,64 @@ Package caption Info: End \AtBeginDocument code.
 <./images/p30_img183.png, id=9, 966.61125pt x 966.61125pt>
 File: ./images/p30_img183.png Graphic file (type png)
 <use ./images/p30_img183.png>
-Package pdftex.def Info: ./images/p30_img183.png  used on input line 69.
+Package pdftex.def Info: ./images/p30_img183.png  used on input line 79.
 (pdftex.def)             Requested size: 128.0374pt x 128.0385pt.
  [2 <./images/p30_img183.png (PNG copy)>]
 <./images/p50_img275.png, id=13, 838.13126pt x 215.80624pt>
 File: ./images/p50_img275.png Graphic file (type png)
 <use ./images/p50_img275.png>
-Package pdftex.def Info: ./images/p50_img275.png  used on input line 104.
+Package pdftex.def Info: ./images/p50_img275.png  used on input line 114.
 (pdftex.def)             Requested size: 513.11745pt x 132.11908pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--108
+Underfull \hbox (badness 10000) in paragraph at lines 117--118
 
  []
 
 <./images/p63_img322.png, id=14, 2019.545pt x 727.71875pt>
 File: ./images/p63_img322.png Graphic file (type png)
 <use ./images/p63_img322.png>
-Package pdftex.def Info: ./images/p63_img322.png  used on input line 116.
+Package pdftex.def Info: ./images/p63_img322.png  used on input line 126.
 (pdftex.def)             Requested size: 513.11745pt x 184.89403pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--118
+Underfull \hbox (badness 10000) in paragraph at lines 119--128
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--118
+Underfull \hbox (badness 10000) in paragraph at lines 119--128
 
  []
 
 [3 <./images/p50_img275.png (PNG copy)>]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 125.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 135.
  (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 125.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 135.
  (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 137--138
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
 
  []
 
 [4 <./images/p63_img322.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 143--144
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
 
  []
 
 <./images/p93_img447.png, id=26, 1416.29124pt x 439.6425pt>
 File: ./images/p93_img447.png Graphic file (type png)
 <use ./images/p93_img447.png>
-Package pdftex.def Info: ./images/p93_img447.png  used on input line 151.
+Package pdftex.def Info: ./images/p93_img447.png  used on input line 161.
 (pdftex.def)             Requested size: 513.11745pt x 159.28413pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 145--154
+Underfull \hbox (badness 10000) in paragraph at lines 155--164
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 145--154
+Underfull \hbox (badness 10000) in paragraph at lines 155--164
 
  []
 
@@ -296,57 +298,62 @@ Underfull \hbox (badness 10000) in paragraph at lines 145--154
 <./images/p112_img523.png, id=30, 1304.875pt x 470.75874pt>
 File: ./images/p112_img523.png Graphic file (type png)
 <use ./images/p112_img523.png>
-Package pdftex.def Info: ./images/p112_img523.png  used on input line 161.
+Package pdftex.def Info: ./images/p112_img523.png  used on input line 171.
 (pdftex.def)             Requested size: 312.9803pt x 112.91257pt.
 <./images/p118_img552.png, id=31, 868.24374pt x 550.055pt>
 File: ./images/p118_img552.png Graphic file (type png)
 <use ./images/p118_img552.png>
-Package pdftex.def Info: ./images/p118_img552.png  used on input line 169.
+Package pdftex.def Info: ./images/p118_img552.png  used on input line 179.
 (pdftex.def)             Requested size: 312.9803pt x 198.27983pt.
  [6 <./images/p112_img523.png (PNG copy)> <./images/p118_img552.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 187--191
+Underfull \hbox (badness 10000) in paragraph at lines 197--201
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 210--217
+Underfull \hbox (badness 10000) in paragraph at lines 220--225
 
  []
 
 [7]
-<images/img0.png, id=40, 911.405pt x 451.6875pt>
+Underfull \hbox (badness 10000) in paragraph at lines 250--254
+
+ []
+
+[8]
+<images/img0.png, id=45, 911.405pt x 451.6875pt>
 File: images/img0.png Graphic file (type png)
 <use images/img0.png>
-Package pdftex.def Info: images/img0.png  used on input line 225.
+Package pdftex.def Info: images/img0.png  used on input line 272.
 (pdftex.def)             Requested size: 307.8736pt x 152.57924pt.
-<images/img1.png, id=42, 316.93407pt x 216.81pt>
+<images/img1.png, id=47, 316.93407pt x 216.81pt>
 File: images/img1.png Graphic file (type png)
 <use images/img1.png>
-Package pdftex.def Info: images/img1.png  used on input line 226.
+Package pdftex.def Info: images/img1.png  used on input line 273.
 (pdftex.def)             Requested size: 205.24384pt x 140.40874pt.
 
-Overfull \hbox (2.2222pt too wide) in paragraph at lines 225--227
+Overfull \hbox (2.2222pt too wide) in paragraph at lines 272--274
 [][] [] 
  []
 
-[8 <./images/img0.png> <./images/img1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 238--241
+[9 <./images/img0.png> <./images/img1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 279--280
 
  []
 
-[9] (main.aux) ) 
+[10] (main.aux) ) 
 Here is how much of TeX's memory you used:
- 4492 strings out of 476339
- 74403 string characters out of 5788120
- 1863340 words of memory out of 5000000
- 24892 multiletter control sequences out of 15000+600000
- 515839 words of font info for 46 fonts, out of 8000000 for 9000
+ 4492 strings out of 475385
+ 74397 string characters out of 2776908
+ 423170 words of memory out of 3000000
+ 25848 multiletter control sequences out of 15000+600000
+ 472811 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,7n,63p,592b,378s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\andre\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (9 pages, 2005572 bytes).
+ 55i,7n,63p,592b,373s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ <C:\Users\andre\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam7.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (10 pages, 2020366 bytes).
 PDF statistics:
- 97 PDF objects out of 1000 (max. 8388607)
+ 105 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
